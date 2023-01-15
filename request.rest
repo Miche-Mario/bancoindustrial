@@ -1,0 +1,40 @@
+// Create a user
+POST http://localhost:5000/users
+Content-Type:  application/json
+
+{
+    "firstname": "Admin",
+    "username": "bridge",
+    "password": "bridege666",
+    "confirmpassword": "bridege666",
+    "role": "admin"
+}
+
+###
+// get All Users
+GET https://michegh.herokuapp.com/me
+###
+// get Single user
+
+GET http://localhost:5000/users/f76f92d9-c161-4885-9633-6f0db36113cd
+
+
+###
+// Login user
+POST https://michegh.herokuapp.com/login
+Content-Type:  application/json
+
+{
+   
+    "username": "user",
+    "password": "user"
+}
+
+###
+// Login user
+POST http://localhost:5000/username
+Content-Type:  application/json
+
+{
+    "search": "ga"
+}
