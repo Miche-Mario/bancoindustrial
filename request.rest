@@ -1,5 +1,5 @@
 // Create a user
-POST http://localhost:5000/users
+POST https://meandyouapp.herokuapp.com/users
 Content-Type:  application/json
 
 {

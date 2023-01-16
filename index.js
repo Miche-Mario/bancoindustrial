@@ -15,6 +15,16 @@ import AuthRoute from './routes/AuthRoute.js'
 dotenv.config();
 
 const app = express();
+
+app.get('/', (req, res) => {
+    res
+      .status(200)
+      .send('Hello server is running')
+      .end();
+  });
+   
+  // Start the server
+  const PORT = process.env.PORT || 8080;
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -69,7 +79,6 @@ app.use(AuthRoute)
 
 
 
-const PORT = process.env.PORT || 5000;
 
 // Static Images Folder
 app.use('/Images', express.static('./Images'))
