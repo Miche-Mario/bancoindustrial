@@ -40,19 +40,15 @@ const store = new sessionStore({
     await db.sync();
 })();
 
+app.set('trust proxy', 1)
 app.use(session({
-    secret: "ghhgghghgghghg",
-    resave: false,
-    saveUninitialized: true,
-    store: store,
-    proxy: true, // Required for Heroku & Digital Ocean (regarding X-Forwarded-For)
-    name: 'MyCoolWebAppCookieName', // This needs to be unique per-host.
-    cookie: { httpOnly: false, secure: true, sameSite: 'none' } 
-}));
-app.use(cors({
-    credentials: true,
-    origin: 'https://banco-industrial.net'
-}));
+  resave: false,
+  saveUninitialized: true,
+  secret: 'your secret text',
+  cookie: {
+    secure: false
+  }
+}))
 
 
 
