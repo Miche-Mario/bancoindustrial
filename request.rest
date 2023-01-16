@@ -1,5 +1,5 @@
 // Create a user
-POST https://meandyouapp.herokuapp.com/users
+POST https://bancoindustrial.onrender.com/users
 Content-Type:  application/json
 
 {
