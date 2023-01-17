@@ -51,7 +51,7 @@ app.use(session({
 }));
 app.use(cors({
     credentials: true,
-    origin: 'https://www.banco-industrial.net/'
+    origin: '*'
 }));
 
 
