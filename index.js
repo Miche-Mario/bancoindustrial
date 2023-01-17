@@ -39,7 +39,7 @@ const store = new sessionStore({
 (async()=>{
     await db.sync();
 })();
-
+app.set("trust proxy", true);
 app.use(session({
     secret: "ghhgghgdfhdfhdfhdfhgghghg",
     resave: false,
