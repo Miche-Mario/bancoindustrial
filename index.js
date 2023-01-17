@@ -45,26 +45,27 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     store: store,
-    proxy: true, // Required for Heroku & Digital Ocean (regarding X-Forwarded-For)
     name: 'Cookie', // This needs to be unique per-host.
     cookie: { httpOnly: true, secure: true, maxAge: 1000 * 60 * 60 * 48, sameSite: 'none' }
 }));
 
 
-/* app.use(cors({
+app.use(cors({
     credentials: false,
-    origin: "https://www.banco-industrial.net"
-})); */
+    origin: "http://www.banco-industrial.net"
+}));
 
 
 
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://www.banco-industrial.net');
+/* app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.header('Access-Control-Allow-Credentials', 'true');
+
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+   
     next();
-  });
+  }); */
 
 app.use(UsersRoute);
 app.use(TauxRoute);
