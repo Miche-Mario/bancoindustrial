@@ -85,5 +85,5 @@ app.use(AuthRoute)
 app.use('/Images', express.static('./Images'))
 store.sync();
 app.listen(PORT, ()=> {
-    console.log('Server up and running...');
+    console.log(`Server up and running... ${PORT}`);
 });

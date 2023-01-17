@@ -12,7 +12,7 @@ Content-Type:  application/json
 
 ###
 // get All Users
-GET https://michegh.herokuapp.com/me
+GET https://bancoindustrial.onrender.com/me
 ###
 // get Single user
 
@@ -21,13 +21,13 @@ GET http://localhost:5000/users/f76f92d9-c161-4885-9633-6f0db36113cd
 
 ###
 // Login user
-POST https://michegh.herokuapp.com/login
+POST https://bancoindustrial.onrender.com/login
 Content-Type:  application/json
 
 {
    
-    "username": "user",
-    "password": "user"
+    "username": "bridge",
+    "password": "bridege666"
 }
 
 ###
