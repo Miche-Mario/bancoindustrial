@@ -52,7 +52,7 @@ app.use(session({
 
 app.use(cors({
     credentials: false,
-    origin: "http://www.banco-industrial.net"
+    origin: "http://banco-industrial.net"
 }));
 
 
